@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap 排版</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<!-- 引入 Bootstrap -->
+<link
+	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+<!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body>
+	<div class="container">
+		<h1>
+			我是标题1 h1. <small>我是副标题1 h1</small>
+		</h1>
+		<h2>
+			我是标题2 h2. <small>我是副标题2 h2</small>
+		</h2>
+		<h3>
+			我是标题3 h3. <small>我是副标题3 h3</small>
+		</h3>
+		<h4>
+			我是标题4 h4. <small>我是副标题4 h4</small>
+		</h4>
+		<h5>
+			我是标题5 h5. <small>我是副标题5 h5</small>
+		</h5>
+		<h6>
+			我是标题6 h6. <small>我是副标题6 h6</small>
+		</h6>
+
+		<h2>引导主体副本</h2>
+		<p class="lead">这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。这是一个演示引导主体副本用法的实例。</p>
+
+		<small>本行内容是在标签内</small> <br> <strong>本行内容是在标签内</strong> <br>
+		<em>本行内容是在标签内，并呈现为斜体</em> <br>
+		<p class="text-left">向左对齐文本</p>
+		<p class="text-center">居中对齐文本</p>
+		<p class="text-right">向右对齐文本</p>
+		<p class="text-muted">本行内容是减弱的</p>
+		<p class="text-primary">本行内容带有一个 primary class</p>
+		<p class="text-success">本行内容带有一个 success class</p>
+		<p class="text-info">本行内容带有一个 info class</p>
+		<p class="text-warning">本行内容带有一个 warning class</p>
+		<p class="text-danger">本行内容带有一个 danger class</p>
+
+		<abbr title="World Wide Web">WWW</abbr> <br> <abbr
+			title="Real Simple Syndication" class="initialism">RSS</abbr>
+
+		<address>
+			<strong>Some Company, Inc.</strong><br> 007 street<br> Some
+			City, State XXXXX<br> <abbr title="Phone">P:</abbr> (123)
+			456-7890
+		</address>
+		<address>
+			<strong>Full Name</strong><br> <a href="mailto:#">mailto@somedomain.com</a>
+		</address>
+
+
+		<blockquote>
+			<p>
+				这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。
+			</p>
+		</blockquote>
+		<blockquote>
+			这是一个带有源标题的引用。 <small>Someone famous in <cite
+				title="Source Title">Source Title</cite></small>
+		</blockquote>
+		<blockquote class="pull-right">
+			这是一个向右对齐的引用。 <small>Someone famous in <cite
+				title="Source Title">Source Title</cite></small>
+		</blockquote>
+	</div>
+
+	<div class="container">
+		<h1>列表 排版</h1>
+		<h4>有序列表</h4>
+		<ol>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ol>
+		<h4>无序列表</h4>
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ul>
+		<h4>未定义样式列表</h4>
+		<ul class="list-unstyled">
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ul>
+		<h4>内联列表</h4>
+		<ul class="list-inline">
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ul>
+		<h4>定义列表</h4>
+		<dl>
+			<dt>Description 1</dt>
+			<dd>Item 1</dd>
+			<dt>Description 2</dt>
+			<dd>Item 2</dd>
+		</dl>
+		<h4>水平的定义列表</h4>
+		<dl class="dl-horizontal">
+			<dt>Description 1</dt>
+			<dd>Item 1</dd>
+			<dt>Description 2</dt>
+			<dd>Item 2</dd>
+		</dl>
+	</div>
+
+	<div class="container">
+		<h2>排版</h2>
+		<p class="text-lowercase">Lowercased text（小写文本）.</p>
+		<p class="text-uppercase">Uppercased text（大写文本）.</p>
+		<p class="text-capitalize">Capitalized text（首字母大写文本）.</p>
+	</div>
+
+	<div class="container">
+		<h2>排版</h2>
+		<p class="text-left">左对齐文本</p>
+		<p class="text-right">右对齐文本</p>
+		<p class="text-center">居中对齐文本</p>
+		<p class="text-justify">对齐文本。该段落会根据屏幕的大小对超出屏幕的文字进行换行</p>
+		<p class="text-nowrap">该段落不会根据屏幕的大小对超出屏幕的文字进行换行。</p>
+		<p>
+			<strong>提示:</strong> 尝试重置浏览器大写查看 “text-justify” 和 “text-nowrap”
+			段落的效果。
+		</p>
+	</div>
+
+	<div class="container">
+		<h2>排版</h2>
+		<p>设置 pre 元素可滚动：</p>
+		<pre class="pre-scrollable">
+		内容可滚动
+		Text in a pre element
+		is displayed in a fixed-width
+		font, and it preserves
+		both      spaces and
+		line breaks.
+		Text in a pre element
+		is displayed in a fixed-width
+		font, and it preserves
+		both      spaces and
+		line breaks.
+		Text in a pre element
+		is displayed in a fixed-width
+		font, and it preserves
+		both      spaces and
+		line breaks.
+		Text in a pre element
+		is displayed in a fixed-width
+		font, and it preserves
+		both      spaces and
+		line breaks.
+	</pre>
+	</div>
+
+	<div class="container">
+		<h2>代码</h2>
+		<p>使用 kbd 元素表示按键输入:</p>
+		<p>
+			使用
+			<kbd>ctrl + p</kbd>
+			来打开打印窗口。
+		</p>
+	</div>
+
+	<div class="container">
+		<h2>代码</h2>
+		<p>使用 var 元素表示变量：</p>
+		<p>
+			<var>x</var>
+			=
+			<var>a</var>
+			<var>b</var>
+			+
+			<var>y</var>
+		</p>
+	</div>
+
+	<div class="container">
+		<h2>代码</h2>
+		<p>使用 samp 元素包含电脑输出的内容:</p>
+		<p>
+			<samp>This text is output from a computer program....</samp>
+		</p>
+	</div>
+
+
+	<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+	<script
+		src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- 包括所有已编译的插件 -->
+	<script
+		src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
