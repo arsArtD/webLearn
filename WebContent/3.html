@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap 模板</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<!-- 引入 Bootstrap -->
+<link
+	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+<!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+<link href="//vjs.zencdn.net/5.11/video-js.min.css" rel="stylesheet">
+<script src="//vjs.zencdn.net/5.11/video.min.js"></script>
+<script src="//lovenoodles.cn/static/js/videojs-playlist.js"></script>
+</head>
+<body>
+	<div class="container">
+		<video id="videoJs" class="video-js vjs-default-skin" controls
+			preload="none" width="640" height="360"
+			data-setup='{ "html5" : { "nativeTextTracks" : false } }'>
+
+		</video>
+		
+		<button id="change0" type="button" class="btn btn-success">播放1</button>
+		<button id="change1" type="button" class="btn btn-success">播放2</button>
+		<button id="change2" type="button" class="btn btn-success">播放3</button>
+
+	</div>
+
+	<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+	<script
+		src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- 包括所有已编译的插件 -->
+	<script
+		src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javaScript">
+		/*var player = videojs('my-player');
+		var options = {};
+
+		var player = videojs('my-player', options, function onPlayerReady() {
+			videojs.log('Your player is ready!');
+
+			// In this context, `this` is the player that was created by Video.js.
+			this.play();
+
+			// How about an event listener?
+			this.on('ended', function() {
+				this.play();
+			});
+		});*/
+	    //https://github.com/brightcove/videojs-playlist/blob/master/index.html
+		var videos = [
+				{
+					sources : [{src: 'http://10.9.202.149/webapps/AIRCHINAFILM/Resources/film/Your%20Lie%20in%20April.mp4'}],
+					poster : 'http://flowplayer.org/media/img/demos/minimalist.jpg',
+					title : 'Video 1'
+				},
+				{
+					sources : [{src:'http://10.9.202.149/webapps/YOUKU/video/cyfz28.mp4'}],
+					poster : 'http://flowplayer.org/media/img/demos/playlist/railway_station.jpg',
+					title : 'Video 2'
+				},
+				{
+					sources : [{src: 'http://10.9.202.149/webapps/IQIYI/resource/videos/v0/20141229/91/df/3b60dbf168cd6e3c9fbda53ade3b9969.mp4'}],
+					poster : 'http://flowplayer.org/media/img/demos/functional.jpg',
+					title : 'Video 3'
+				} ];
+		var player = videojs('videoJs');
+		
+		player.playlist(videos);
+		
+		// Play through the playlist automatically.
+		player.playlist.autoadvance(0);
+		
+		$("button").click(function(){
+			var id=$(this).attr('id');
+			
+			var num=id.replace("change","");
+			player.playlist([]);
+			player.playlist([videos[num]]);
+			player.playlist.autoadvance(0);
+		})
+	</script>
+</body>
+</html>

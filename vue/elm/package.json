@@ -1,0 +1,16 @@
+{
+  "name": "front-elm",
+  "version": "1.0.0",
+  "description": "以vue2-elm为参考作学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "elm",
+    "front"
+  ],
+  "author": "zhaowq",
+  "license": "GPL-3.0"
+}

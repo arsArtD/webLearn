@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="js/vue2.5.js"></script>
+</head>
+
+<body>
+    <div id="menulist">
+        <ol>
+            <menu-item v-for="item in menuData" v-bind:menu="item" v-bind:key="item.id">
+            </menu-item>
+        </ol>
+    </div>
+
+    <script>
+        Vue.component('menu-item', {
+            props: ['menu'],
+            template: '<li><a href="javascript:void(0)" :data_href="menu.dhref" onclick="openUrl(this)">{{menu.name}}</a></li>'
+        })
+
+        new Vue({
+            el: '#menulist',
+            data: {
+                menuData: [
+                    { id: 0, dhref: 'index_1.html', name: 'Hello World' },
+                    { id: 1, dhref: 'index_2.html', name: '绑定元素' },
+                    { id: 2, dhref: 'index_3.html', name: '条件与循环' },
+                    { id: 3, dhref: 'index_4.html', name: '处理用户输入' },
+                    { id: 4, dhref: 'index_5.html', name: '组件化应用构建' }
+                ]
+            }
+        })
+
+
+        function openUrl(obj) {
+            //console.log(obj.data_href);
+            console.log(obj.getAttribute("data_href"));
+            window.parent.document.getElementById('content').src = obj.getAttribute("data_href");
+        }
+        //console.log(window.parent.frames[1].document.location);
+    </script>
+</body>
+
+</html>
