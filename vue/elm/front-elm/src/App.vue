@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <p>
+    <!--<p>
       <router-link to="/home">Go to home</router-link>
       <router-link to="/city">Go to city</router-link>
-    </p>
+    </p>-->
     <router-view/>
   </div>
 </template>
@@ -14,13 +14,13 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import './style/common';
+	.router-fade-enter-active, .router-fade-leave-active {
+	  	transition: opacity .3s;
+	}
+	.router-fade-enter, .router-fade-leave-active {
+	  	opacity: 0;
+	}
 </style>
+

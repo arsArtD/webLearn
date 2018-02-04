@@ -4,13 +4,39 @@
 
 const path = require('path')
 
+const context = [ //代理路径
+  '/shopping',
+  '/ugc',
+  '/v1',
+  '/v2',
+  '/v3',
+  '/v4',
+  '/bos',
+  '/member',
+  '/promotion',
+  '/eus',
+  '/payapi',
+]
+
+const proxypath = 'http://localhost:8001'
+
+let proxyTable = {};
+context.map(function(item, index, array){
+  proxyTable[item] = {
+    target: proxypath,
+    changeOrigin : true
+  }
+})
+
+console.log(proxyTable);
+
 module.exports = {
   dev: {
 
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: proxyTable,
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -40,7 +66,7 @@ module.exports = {
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-    cssSourceMap: true,
+    cssSourceMap: false,
   },
 
   build: {

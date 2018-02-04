@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import routers from './router/router'
+import store from './store/'
+import rem from './config/rem'
 
 /* eslint-disable no-new */
 // new Vue({
@@ -23,5 +25,6 @@ const router = new VueRouter({
 
 new Vue({
   router,
+  store
 }).$mount('#app')
 
